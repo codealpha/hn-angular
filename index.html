@@ -1,0 +1,65 @@
+<!doctype html>
+
+<!--[if lt IE 7]> <html class="nojs ms lt_ie7" lang="en"> <![endif]-->
+
+<!--[if IE 7]>    <html class="nojs ms ie7" lang="en"> <![endif]-->
+
+<!--[if IE 8]>    <html class="nojs ms ie8" lang="en"> <![endif]-->
+
+<!--[if gt IE 8]> <html class="nojs ms" lang="en"> <![endif]-->
+
+<html lang="en" ng-app="hn">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	
+	<!-- Mobile Viewport -->
+    <meta name="viewport" content="width=device-width">
+
+	<title>Hacker News</title>
+
+	<!-- <link href="assets/css/normalise.css" rel="stylesheet"> -->
+	<link href="assets/css/typography.css" rel="stylesheet">
+	<link href="assets/css/styles.css" rel="stylesheet">
+
+	<!-- All JavaScript at the bottom, except modernizr -->
+  	<!--<script type="text/javascript" src="assets/js/modernizr.js"></script> -->
+  	<script type="text/javascript" src="assets/js/angular.js"></script>
+  	<script type="text/javascript" src="assets/js/controllers.js"></script>
+
+  	<meta name="apple-mobile-web-app-capable" content="yes" />  
+  	<meta name="apple-mobile-web-app-status-bar-style" content="black" /> 
+
+  	<link rel="apple-touch-icon-precomposed" href="assets/img/HN/icons/icon.png"/>  
+  	<link rel="apple-touch-startup-image" href="assets/img/HN/icons/splash.png" />  
+
+</head>
+
+
+<body ng-controller="TopListCtrl">
+
+<header>
+	<div class="container">
+		<h1 class="logo">Hacker News</h1>
+	</div>
+</header>
+
+	
+<div class="container content">
+
+	<ol class="posts">
+		<li ng-repeat="post in posts.items">
+			<a href="{{ post.url }}">{{ post.title }}</a>
+			<span class="url">{{ post.url | shortURL }}</span>
+			<small> {{ post.points + " points"}} by {{ post.postedBy }} {{ post.postedAgo }} 
+				| {{ post.commentCount + " comments" }}</small>
+		</li>
+	</ol>
+
+	<a class="button orange more">Next Page &rarr;</a>
+
+</div>
+
+</body>
+</html>
