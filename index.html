@@ -1,13 +1,4 @@
 <!doctype html>
-
-<!--[if lt IE 7]> <html class="nojs ms lt_ie7" lang="en"> <![endif]-->
-
-<!--[if IE 7]>    <html class="nojs ms ie7" lang="en"> <![endif]-->
-
-<!--[if IE 8]>    <html class="nojs ms ie8" lang="en"> <![endif]-->
-
-<!--[if gt IE 8]> <html class="nojs ms" lang="en"> <![endif]-->
-
 <html lang="en" ng-app="hn">
 
 <head>
@@ -19,18 +10,19 @@
 
 	<title>Hacker News</title>
 
-	<!-- <link href="assets/css/normalise.css" rel="stylesheet"> -->
+	<!-- Stylesheets -->
 	<link href="assets/css/typography.css" rel="stylesheet">
 	<link href="assets/css/styles.css" rel="stylesheet">
 
-	<!-- All JavaScript at the bottom, except modernizr -->
-  	<!--<script type="text/javascript" src="assets/js/modernizr.js"></script> -->
+	<!-- Angular JS Files -->
   	<script type="text/javascript" src="assets/js/angular.js"></script>
   	<script type="text/javascript" src="assets/js/controllers.js"></script>
 
+  	<!-- Meta Tags for Displaying full screen on iPhone -->
   	<meta name="apple-mobile-web-app-capable" content="yes" />  
   	<meta name="apple-mobile-web-app-status-bar-style" content="black" /> 
 
+  	<!-- Icons for iOS -->
   	<link rel="apple-touch-icon-precomposed" href="assets/img/HN/icons/icon.png"/>  
   	<link rel="apple-touch-startup-image" href="assets/img/HN/icons/splash.png" />  
 
@@ -56,8 +48,6 @@
 				| {{ post.commentCount + " comments" }}</small>
 		</li>
 	</ol>
-
-	<a class="button orange more">Next Page &rarr;</a>
 
 </div>
 
