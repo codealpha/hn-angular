@@ -1,4 +1,4 @@
-hn-angular
-==========
+A Hacker News Client built in Angular JS
+=========================================
 
-An Angular JS App for fetching the top 30 posts on Hacker News.
+This App uses Angular JS to fetch the top 30 posts from [Hacker News](http://news.ycombinator.com), and display them on the page.
